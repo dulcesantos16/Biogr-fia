@@ -1,0 +1,16 @@
+
+services:
+
+  nginx:
+    image: nginx
+    ports:
+      - "3000:80"
+    volumes:
+      - ./:/usr/share/nginx/html
+    networks:
+      - app-network
+    
+
+networks:
+  app-network:
+    driver: bridge    
